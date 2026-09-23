@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio | Habib Burahman</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  >
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- ================= BACKGROUND TAMBAHAN ================= -->
+  <style>
+
+    /* Background utama */
+    body {
+      background: #07152f;
+      color: #ffffff;
+    }
+
+    /* Semua section menjadi gelap */
+    .section {
+      background: #07152f !important;
+      color: #ffffff;
+    }
+
+    /* Bagian game */
+    .prestasi-section {
+      background: #07152f !important;
+      color: #ffffff;
+    }
+
+    /* Bagian contact */
+    .contact-section {
+      background: #07152f !important;
+      color: #ffffff;
+    }
+
+    /* Judul section */
+    .section-title h2 {
+      color: #ffffff;
+    }
+
+    .section-title p {
+      color: #cbd5e1;
+    }
+
+    /* Tulisan kecil di atas judul */
+    .section-title span {
+      color: #00d9ff;
+    }
+
+    /* About */
+    .about-content h3 {
+      color: #ffffff;
+    }
+
+    .about-content p {
+      color: #cbd5e1;
+    }
+
+    /* Skill */
+    .skill-info span {
+      color: #ffffff;
+    }
+
+    /* Label contact */
+    .contact-card label {
+      color: #ffffff;
+    }
+
+    /* Efek background supaya tidak polos */
+    .section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(0, 217, 255, 0.08);
+      border-radius: 50%;
+      top: 50px;
+      right: -100px;
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .section::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: rgba(0, 119, 255, 0.06);
+      border-radius: 50%;
+      bottom: 50px;
+      left: -100px;
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="#home">
+        <span>H</span>abib.
+      </a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#game">
+              Game
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#animasi">
+              Animasi
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= HOME ================= -->
+  <section id="home" class="hero">
+
+    <!-- Background dekorasi -->
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+
+
+    <div class="container">
+
+      <div class="row align-items-center min-vh-100">
+
+
+        <!-- TEKS -->
+        <div class="col-lg-7 hero-text">
+
+          <p class="hello">
+            👋 HALO, SAYA
+          </p>
+
+
+          <h1>
+            Habib <span>Burahman</span>
+          </h1>
+
+
+          <h2>
+            Gaming <span>|</span> Animasi
+          </h2>
+
+
+          <p class="description">
+
+            Selamat datang di website portfolio saya.
+            Saya menyukai dunia gaming dan animasi.
+            Saya juga senang mencoba hal-hal baru dan membuat
+            berbagai hal kreatif.
+
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              href="#about"
+              class="btn btn-main"
+            >
+
+              <i class="bi bi-person"></i>
+
+              Tentang Saya
+
+            </a>
+
+
+            <a
+              href="#game"
+              class="btn btn-outline-light"
+            >
+
+              <i class="bi bi-controller"></i>
+
+              Game Saya
+
+            </a>
+
+          </div>
+
+
+          <!-- SOCIAL MEDIA -->
+          <div class="social-icons">
+
+            <a href="#" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+
+            <a href="#" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- FOTO -->
+        <div class="col-lg-5 text-center">
+
+          <div class="profile-container">
+
+            <div class="profile-ring"></div>
+
+            <img
+              src="img/habib.jpg"
+              alt="Foto Habib Burahman"
+              class="profile-img"
+            >
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+
+    <div class="container">
+
+
+      <div class="section-title">
+
+        <span>PROFILE</span>
+
+        <h2>Tentang Saya</h2>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <div class="row align-items-center">
+
+
+        <!-- ABOUT CARD -->
+        <div class="col-lg-5 mb-4">
+
+          <div class="about-card">
+
+            <div class="about-icon">
+
+              <i class="bi bi-controller"></i>
+
+            </div>
+
+
+            <h3>
+              Gaming | Animasi
+            </h3>
+
+
+            <p>
+
+              Saya menyukai dunia gaming dan animasi.
+              Selain itu saya juga tertarik untuk mempelajari
+              teknologi dan membuat berbagai hal kreatif.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ABOUT CONTENT -->
+        <div class="col-lg-7">
+
+          <div class="about-content">
+
+
+            <h3>
+              Halo, saya Habib 👋
+            </h3>
+
+
+            <p>
+
+              Saya adalah seorang pelajar yang tertarik dengan
+              dunia gaming, animasi, dan teknologi.
+              Saya suka mencoba hal-hal baru dan membuat berbagai
+              hal yang menarik.
+
+            </p>
+
+
+            <p>
+
+              Selain bermain game, saya juga menyukai proses
+              membuat animasi. Saya terus belajar untuk meningkatkan
+              kemampuan dan menghasilkan karya yang lebih baik.
+
+            </p>
+
+
+
+            <!-- SKILLS -->
+            <div class="skills">
+
+
+              <!-- GAMING -->
+              <div class="skill">
+
+                <div class="skill-info">
+
+                  <span>
+                    Gaming
+                  </span>
+
+                  <span>
+                    90%
+                  </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                  <div
+                    class="progress-bar"
+                    style="width:90%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- ANIMASI -->
+              <div class="skill">
+
+                <div class="skill-info">
+
+                  <span>
+                    Animasi
+                  </span>
+
+                  <span>
+                    85%
+                  </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                  <div
+                    class="progress-bar"
+                    style="width:85%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================================================= -->
+<!-- ================= GAME SAYA ===================== -->
+<!-- ================================================= -->
+
+<section id="game" class="section prestasi-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>MY GAME</span>
+
+      <h2>Game yang Saya Mainkan</h2>
+
+      <div class="line"></div>
+
+      <p>
+        Beberapa game yang sering saya mainkan.
+      </p>
+
+    </div>
+
+
+    <!-- GRID GAME -->
+    <div class="row justify-content-center g-4">
+
+
+      <!-- GAME 1 -->
+      <div class="col-md-6 col-lg-5">
+
+        <div class="achievement-card">
+
+          <div class="image-wrapper">
+
+            <img
+              src="img/game/1.jpeg"
+              alt="Free Fire"
+            >
+
+            <div class="image-overlay">
+
+              <i class="bi bi-controller"></i>
+
+            </div>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="badge-custom">
+              FREE FIRE
+            </span>
+
+            <h3>
+              Free Fire
+            </h3>
+
+            <p>
+              Game Battle Royale yang sering saya
+              mainkan bersama teman dan tim.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- GAME 2 -->
+      <div class="col-md-6 col-lg-5">
+
+        <div class="achievement-card">
+
+          <div class="image-wrapper">
+
+            <img
+              src="img/game/2.jpeg"
+              alt="Roblox"
+            >
+
+            <div class="image-overlay">
+
+              <i class="bi bi-controller"></i>
+
+            </div>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="badge-custom">
+              ROBLOX
+            </span>
+
+            <h3>
+              Roblox
+            </h3>
+
+            <p>
+              Game yang saya sukai karena bisa
+              membangun dan berkreasi dengan bebas.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+  <!-- ================================================= -->
+  <!-- =============== ANIMASI FAVORIT ================= -->
+  <!-- ================================================= -->
+
+  <section
+    id="animasi"
+    class="section"
+  >
+
+    <div class="container">
+
+
+      <div class="section-title">
+
+        <span>
+          MY FAVORITE
+        </span>
+
+
+        <h2>
+          Animasi Favorit Saya
+        </h2>
+
+
+        <div class="line"></div>
+
+
+        <p>
+          Beberapa animasi yang saya sukai dan menjadi inspirasi.
+        </p>
+
+      </div>
+
+
+
+      <!-- GRID 3 -->
+      <div class="row g-4">
+
+
+        <!-- ANIMASI 1 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="achievement-card">
+
+
+            <div class="image-wrapper">
+
+              <img
+                src="img/animasi/1.jpeg"
+                alt="Animasi Favorit 1"
+              >
+
+
+              <div class="image-overlay">
+
+                <i class="bi bi-play-circle"></i>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card-content">
+
+              <span class="badge-custom">
+                ANIMASI
+              </span>
+
+
+              <h3>
+                Animasi Favorit 1
+              </h3>
+
+
+              <p>
+                Salah satu animasi favorit saya
+                yang saya sukai.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ANIMASI 2 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="achievement-card">
+
+
+            <div class="image-wrapper">
+
+              <img
+                src="img/animasi/2.jpeg"
+                alt="Animasi Favorit 2"
+              >
+
+
+              <div class="image-overlay">
+
+                <i class="bi bi-play-circle"></i>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card-content">
+
+              <span class="badge-custom">
+                ANIMASI
+              </span>
+
+
+              <h3>
+                Animasi Favorit 2
+              </h3>
+
+
+              <p>
+                Animasi yang saya sukai karena
+                memiliki cerita yang menarik.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ANIMASI 3 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="achievement-card">
+
+
+            <div class="image-wrapper">
+
+              <img
+                src="img/animasi/3.jpeg"
+                alt="Animasi Favorit 3"
+              >
+
+
+              <div class="image-overlay">
+
+                <i class="bi bi-play-circle"></i>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card-content">
+
+              <span class="badge-custom">
+                ANIMASI
+              </span>
+
+
+              <h3>
+                Animasi Favorit 3
+              </h3>
+
+
+              <p>
+                Animasi yang sering saya tonton akhir-akhir ini
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CONTACT ================= -->
+  <!-- ================= CONTACT ================= -->
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>SOCIAL MEDIA</span>
+
+      <h2>Hubungi Saya</h2>
+
+      <div class="line"></div>
+
+      <p>
+        Temukan dan hubungi saya melalui sosial media berikut.
+      </p>
+
+    </div>
+
+
+    <div class="social-list">
+
+
+      <!-- TIKTOK -->
+      <a
+        href="https://www.tiktok.com/@bibzyxx"
+        target="_blank"
+        class="social-item"
+      >
+
+        <div class="social-icon tiktok">
+          <i class="bi bi-tiktok"></i>
+        </div>
+
+        <div class="social-info">
+
+          <h3>TikTok</h3>
+
+          <p>@bibzyxx</p>
+
+        </div>
+
+        <div class="social-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </div>
+
+      </a>
+
+
+
+      <!-- INSTAGRAM -->
+      <a
+        href="https://www.instagram.com/abib_jagoanneon"
+        target="_blank"
+        class="social-item"
+      >
+
+        <div class="social-icon instagram">
+          <i class="bi bi-instagram"></i>
+        </div>
+
+        <div class="social-info">
+
+          <h3>Instagram</h3>
+
+          <p>@abib_jagoanneon</p>
+
+        </div>
+
+        <div class="social-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </div>
+
+      </a>
+
+
+
+      <!-- WHATSAPP -->
+      <a
+        href="https://wa.me/6283836000314"
+        target="_blank"
+        class="social-item"
+      >
+
+        <div class="social-icon whatsapp">
+          <i class="bi bi-whatsapp"></i>
+        </div>
+
+        <div class="social-info">
+
+          <h3>WhatsApp</h3>
+
+          <p>083836000314</p>
+
+        </div>
+
+        <div class="social-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+
+    <div class="container text-center">
+
+
+      <h4>
+        Habib Burahman
+      </h4>
+
+
+      <p>
+        Gaming | Animasi
+      </p>
+
+
+
+      <div class="footer-social">
+
+
+        <a href="#">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+
+        <a href="#">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+
+        <a href="#">
+          <i class="bi bi-github"></i>
+        </a>
+
+
+        <a href="#">
+          <i class="bi bi-tiktok"></i>
+        </a>
+
+
+      </div>
+
+
+
+      <hr>
+
+
+
+      <p class="copyright">
+        © 2026 Habib Burahman. All Rights Reserved.
+      </p>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ================= BOOTSTRAP JS ================= -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+</body>
+</html>

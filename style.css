@@ -1,0 +1,873 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9ff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  padding: 15px 0;
+  background: rgba(8, 15, 40, 0.85);
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.navbar-brand span {
+  color: #00d4ff;
+}
+
+.nav-link {
+  color: white !important;
+  margin-left: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #00d4ff !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #00d4ff;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 30%, #123d72 0%, transparent 35%),
+    linear-gradient(135deg, #050816, #0b1733, #07152c);
+  color: white;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hello {
+  color: #00d4ff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 80px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #00d4ff;
+}
+
+.hero h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.hero h2 span {
+  color: #00d4ff;
+}
+
+.description {
+  max-width: 650px;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-main {
+  background: #00d4ff;
+  border: 2px solid #00d4ff;
+  color: #03111f;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background: transparent;
+  color: #00d4ff;
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  padding: 12px 25px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   SOCIAL ICON
+========================= */
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00d4ff;
+  border-color: #00d4ff;
+  transform: translateY(-5px);
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-container {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  border: 7px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 30px rgba(0,212,255,0.4),
+    0 0 80px rgba(0,212,255,0.15);
+  animation: floating 4s ease-in-out infinite;
+}
+
+.profile-ring {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border: 2px dashed #00d4ff;
+  border-radius: 50%;
+  animation: rotate 15s linear infinite;
+}
+
+
+/* =========================
+   BACKGROUND CIRCLES
+========================= */
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.25;
+}
+
+.circle-1 {
+  width: 250px;
+  height: 250px;
+  background: #00d4ff;
+  top: -100px;
+  right: -70px;
+}
+
+.circle-2 {
+  width: 180px;
+  height: 180px;
+  background: #6c63ff;
+  bottom: -50px;
+  left: -60px;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  background: #00d4ff;
+  top: 45%;
+  left: 40%;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title span {
+  color: #00a9cc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.section-title p {
+  color: #777;
+  margin-top: 15px;
+}
+
+.line {
+  width: 70px;
+  height: 4px;
+  background: #00d4ff;
+  border-radius: 10px;
+  margin: 15px auto;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card {
+  padding: 40px;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.4s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: #e7faff;
+  color: #00a9cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  margin: 0 auto 25px;
+}
+
+.about-card h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  color: #777;
+  line-height: 1.8;
+}
+
+.about-content h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+  margin-top: 30px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background: #e5e7eb;
+}
+
+.progress-bar {
+  background: #00d4ff;
+  border-radius: 10px;
+}
+
+
+/* =========================
+   PRESTASI
+========================= */
+
+.prestasi-section {
+  background: #f0f4fa;
+}
+
+.achievement-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  transition: 0.4s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.13);
+}
+
+.image-wrapper {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.achievement-card:hover .image-wrapper img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.image-overlay i {
+  font-size: 45px;
+  color: white;
+}
+
+.achievement-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.badge-custom {
+  display: inline-block;
+  background: #e6faff;
+  color: #0099bb;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #777;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  background: white;
+}
+
+.contact-card {
+  background: #f8faff;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.07);
+}
+
+.contact-card label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.12);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #050816;
+  color: white;
+  padding: 50px 0 25px;
+}
+
+footer h4 {
+  font-weight: 700;
+}
+
+footer p {
+  color: #aeb8c8;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #344054;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #00d4ff;
+  border-color: #00d4ff;
+  transform: translateY(-4px);
+}
+
+footer hr {
+  border-color: #344054;
+}
+
+.copyright {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes floating {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .description {
+    margin: auto;
+  }
+
+  .hero-buttons,
+  .social-icons {
+    justify-content: center;
+  }
+
+  .profile-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile-img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .profile-ring {
+    width: 280px;
+    height: 280px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .profile-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  .profile-img {
+    width: 205px;
+    height: 205px;
+  }
+
+  .profile-ring {
+    width: 240px;
+    height: 240px;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+
+}
+/* ================= SOCIAL MEDIA CONTACT ================= */
+
+.social-list {
+  max-width: 650px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-item {
+  width: 100%;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid #dce3ec;
+  border-radius: 18px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.social-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.social-icon i {
+  font-size: 27px;
+  color: white;
+}
+
+/* TikTok */
+.social-icon.tiktok {
+  background: #111111;
+}
+
+/* Instagram */
+.social-icon.instagram {
+  background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+}
+
+/* WhatsApp */
+.social-icon.whatsapp {
+  background: #25d366;
+}
+
+
+.social-info {
+  flex: 1;
+}
+
+.social-info h3 {
+  margin: 0 0 3px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.social-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #718096;
+}
+
+
+.social-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+}
+
+.social-arrow i {
+  font-size: 21px;
+  transition: 0.3s ease;
+}
+
+.social-item:hover .social-arrow i {
+  transform: translateX(5px);
+  color: #00c9f2;
+}
+
+
+/* Responsive HP */
+@media (max-width: 576px) {
+
+  .social-list {
+    width: 100%;
+  }
+
+  .social-item {
+    min-height: 78px;
+    padding: 13px 15px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  .social-icon i {
+    font-size: 23px;
+  }
+
+}
+.image-wrapper {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= GAMBAR 1:1 ================= */
+
+.achievement-card .image-wrapper {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+}
+
+.achievement-card .image-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* =========================================
+   GAME - 2 CARD DI TENGAH
+========================================= */
+
+#game .row {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#game .achievement-card {
+  width: 100%;
+  height: 100%;
+}
+
+#game .image-wrapper {
+  aspect-ratio: 1 / 1 !important;
+  height: auto !important;
+  overflow: hidden;
+}
+
+#game .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Tampilan tablet */
+@media (max-width: 768px) {
+
+  #game .row {
+    max-width: 600px;
+  }
+
+}
+
+
+/* Tampilan HP */
+@media (max-width: 576px) {
+
+  #game .row {
+    max-width: 100%;
+  }
+
+}
